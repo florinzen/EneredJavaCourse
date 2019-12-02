@@ -12,7 +12,7 @@ public class MyApp {
         displayArtisticCompositionsFor(artists); // two sets of null values (no compositions for the artists yet)
 
         ArtisticComposition b1 = new Song("It's my life", 1986);
-        ArtisticComposition b2 = new Song("Livin on a prayer",  1986);
+        ArtisticComposition b2 = new Song("Livin on a prayer",  1990);
 
         a1.setArtisticCompositions(new ArtisticComposition[]{b1, b2}); //
 
@@ -49,6 +49,12 @@ public class MyApp {
         System.out.println(Arrays.toString(newArray));
         Arrays.sort(newArray);
         System.out.println(Arrays.toString(newArray));
+
+        ArtisticComposition b3 = new Song("All I want for Christmas is you", 1994);
+
+        ArtisticComposition[] artisticCompositions = {b1, b2, b3};
+        Arrays.sort(artisticCompositions);
+        System.out.println(Arrays.toString(artisticCompositions));
 
 
     }
