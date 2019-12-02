@@ -1,10 +1,10 @@
 package module2.homework.session6;
 
-public abstract class ArtisticCompostion {
+public abstract class ArtisticComposition {
     private String name;
     private int yearOfRelease;
 
-    public ArtisticCompostion(String name, int yearOfRelease) {
+    public ArtisticComposition(String name, int yearOfRelease) {
         this.name = name;
         this.yearOfRelease = yearOfRelease;
     }

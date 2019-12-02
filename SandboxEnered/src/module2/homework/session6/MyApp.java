@@ -5,16 +5,16 @@ import java.util.Scanner;
 
 public class MyApp {
     public static void main(String[] args) {
-        Artist a1 = new Muscian("Bon Jovi", "New Jersey", new ArtisticCompostion[2], new String[]{"Guitar", "Vocals"});
-        Artist a2 = new Painter("Vincent van Gogh", "Zundert", new ArtisticCompostion[2]);
+        Artist a1 = new Musician("Bon Jovi", "New Jersey", new String[]{"Guitar", "Vocals"});
+        Artist a2 = new Painter("Vincent van Gogh", "Zundert", new ArtisticComposition[2]);
 
         Artist[] artists = {a1, a2};
         displayArtisticCompositionsFor(artists); // two sets of null values (no compositions for the artists yet)
 
-        ArtisticCompostion b1 = new Song("It's my life", 1986);
-        ArtisticCompostion b2 = new Song("Livin on a prayer",  1986);
+        ArtisticComposition b1 = new Song("It's my life", 1986);
+        ArtisticComposition b2 = new Song("Livin on a prayer",  1986);
 
-        a1.setArtisticCompositions(new ArtisticCompostion[]{b1, b2}); //
+        a1.setArtisticCompositions(new ArtisticComposition[]{b1, b2}); //
 
         displayArtisticCompositionsFor(artists); // without a toString methods, something like module2.homework.session6.Song@1b6d3586, module2.homework.session6.Song@1b6d3586 will be printed for Bon Jovi
 
@@ -30,12 +30,17 @@ public class MyApp {
         System.out.print("\nInsert the price of the painting: ");
         double price = Double.parseDouble(input.nextLine());
 
-        ArtisticCompostion b3 = new Painting(name, yearOfRelease, price);
+        ArtisticComposition b3 = new Painting(name, yearOfRelease, price);
 
         System.out.println("Setting the artistic composition to " + a2.getName());
-        a2.setArtisticCompositions(new ArtisticCompostion[]{b3});
+        a2.setArtisticCompositions(new ArtisticComposition[]{b3});
 
         displayArtisticCompositionsFor(artists);
+
+
+        for(int i = 0; i < 10; i++) {
+            System.out.println(a2.createNewArt());
+        }
 
     }
 

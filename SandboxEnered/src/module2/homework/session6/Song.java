@@ -1,6 +1,6 @@
 package module2.homework.session6;
 
-public class Song extends ArtisticCompostion {
+public class Song extends ArtisticComposition {
 
     private int duration;
 

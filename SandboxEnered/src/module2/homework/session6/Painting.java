@@ -1,6 +1,6 @@
 package module2.homework.session6;
 
-public class Painting extends ArtisticCompostion {
+public class Painting extends ArtisticComposition {
     private double price;
 
     public Painting(String name, int yearOfRelease) {

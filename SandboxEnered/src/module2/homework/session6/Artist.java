@@ -1,16 +1,14 @@
 package module2.homework.session6;
 
-import java.util.Arrays;
-
 public abstract class Artist {
     private String name;
     private String hometown;
-    private ArtisticCompostion[] artisticCompositions;
+    private ArtisticComposition[] artisticCompositions;
 
-    public Artist(String name, String hometown, ArtisticCompostion[] artisticCompostions) {
+    public Artist(String name, String hometown) {
         this.name = name;
         this.hometown = hometown;
-        this.artisticCompositions = artisticCompostions;
+        artisticCompositions = new ArtisticComposition[3];
     }
 
     public String getName() {
@@ -29,11 +27,16 @@ public abstract class Artist {
         this.hometown = hometown;
     }
 
-    public ArtisticCompostion[] getArtisticCompositions() {
+    public ArtisticComposition[] getArtisticCompositions() {
         return artisticCompositions;
     }
 
-    public void setArtisticCompositions(ArtisticCompostion[] artisticCompositions) {
+    public void setArtisticCompositions(ArtisticComposition[] artisticCompositions) {
         this.artisticCompositions = artisticCompositions;
     }
+
+    public abstract void perform();
+
+    public abstract ArtisticComposition createNewArt();
+
 }
