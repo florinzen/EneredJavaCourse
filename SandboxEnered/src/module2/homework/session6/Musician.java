@@ -1,6 +1,7 @@
 package module2.homework.session6;
 
 import java.time.Year;
+import java.util.Arrays;
 
 public class Musician extends Artist {
     private String[] musicalInstruments;

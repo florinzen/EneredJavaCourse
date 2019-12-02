@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class MyApp {
     public static void main(String[] args) {
         Artist a1 = new Musician("Bon Jovi", "New Jersey", new String[]{"Guitar", "Vocals"});
-        Artist a2 = new Painter("Vincent van Gogh", "Zundert", new ArtisticComposition[2]);
+        Artist a2 = new Painter("Vincent van Gogh", "Zundert");
 
         Artist[] artists = {a1, a2};
         displayArtisticCompositionsFor(artists); // two sets of null values (no compositions for the artists yet)
@@ -21,7 +21,7 @@ public class MyApp {
         // After adding the toString method (check the Song and ArtisticComposition classes, the output should look something like this:
         // [Song{duration=0} is a ArtisticCompostion{name='It's my life', yearOfRelease=1986}, Song{duration=0} is a ArtisticCompostion{name='Livin on a prayer', yearOfRelease=1986}]
 
-        Scanner input = new Scanner(System.in);
+        /*Scanner input = new Scanner(System.in);
         System.out.println("Let's create a paining for the Artist " + a2.getName());
         System.out.print("Insert the name of the painting: ");
         String name = input.nextLine();
@@ -40,7 +40,16 @@ public class MyApp {
 
         for(int i = 0; i < 10; i++) {
             System.out.println(a2.createNewArt());
-        }
+        }*/
+
+        Artist a3 = new Painter("Andreea Popescu", "Vaslui");
+        Artist a4 = new Painter("Zoe Popescu", "Vaslui");
+
+        Artist[] newArray = {a1, a4, a2, a3};
+        System.out.println(Arrays.toString(newArray));
+        Arrays.sort(newArray);
+        System.out.println(Arrays.toString(newArray));
+
 
     }
 

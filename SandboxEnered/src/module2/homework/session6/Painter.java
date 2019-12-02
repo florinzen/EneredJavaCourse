@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Painter extends Artist {
 
-    public Painter(String name, String hometown, ArtisticComposition[] artisticCompositions) {
+    public Painter(String name, String hometown) {
         super(name, hometown);
     }
 

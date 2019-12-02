@@ -1,6 +1,6 @@
 package module2.homework.session6;
 
-public abstract class ArtisticComposition {
+public abstract class ArtisticComposition implements Comparable<ArtisticComposition> {
     private String name;
     private int yearOfRelease;
 
@@ -31,5 +31,16 @@ public abstract class ArtisticComposition {
                 "name='" + name + '\'' +
                 ", yearOfRelease=" + yearOfRelease +
                 '}';
+    }
+
+    @Override
+    public int compareTo(ArtisticComposition o) {
+        if(this.yearOfRelease > o.yearOfRelease) {
+            return 1;
+        }
+        if(this.yearOfRelease == o.yearOfRelease) {
+            return 0;
+        }
+        return -1;
     }
 }
