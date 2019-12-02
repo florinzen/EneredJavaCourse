@@ -3,6 +3,7 @@ package module2.practice.interfaces;
 import module2.practice.interfaces.clothing.Clothing;
 import module2.practice.interfaces.clothing.Shirt;
 import module2.practice.interfaces.clothing.Trousers;
+import module2.practice.interfaces.outdoors.Outdoors;
 import module2.practice.interfaces.outdoors.Stove;
 import module2.practice.interfaces.outdoors.StoveFuel;
 import module2.practice.interfaces.outdoors.Tent;
@@ -32,10 +33,17 @@ public class MyApp {
         returnables[3] = new Stove(7, 500, 4);
 
         getDoReturn(returnables);
-
         //returnables[3] = new StoveFuel(8, 350, 2);
         // The above line, if uncommented, will generate a compilation error
         // Why? Because StoveFuel is not a Returnable
+
+       /* if(t1 instanceof Outdoors) {
+            System.out.println("This is an outdoor item.");
+        }*/ // Compilation error, t1 cannot be casted to Outdoors - there is no relationship between Trousers and Outdoors
+
+        // By declaring a new reference and assigning the object
+        Returnable test = t1;
+        System.out.println(test.doReturn());
     }
 
     public static void getDoReturn(Returnable[] returnables) {
@@ -47,8 +55,17 @@ public class MyApp {
                 Trousers t = (Trousers) r; // Cast the Returnable reference to a Trousers one
                 // Now we have converted the reference to a Trousers one, and we can use all
                 // the methods Trousers have.
-                System.out.println("The price of the trousers with id " + t.getId() + " is " + t.getPrice());
+                System.out.println("The price of this pair of trousers " + t.getPrice());
             }
+
+            if(r instanceof Clothing) {
+                System.out.println("This item is of Clothing type");
+            }
+
+            if(r instanceof Outdoors) {
+                System.out.println("This item is of Outdoors type");
+            }
+            System.out.println(); // For indentation purposes
         }
     }
 }
