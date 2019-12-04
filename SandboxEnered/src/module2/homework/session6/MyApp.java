@@ -1,5 +1,12 @@
 package module2.homework.session6;
 
+import module2.homework.session6.artist.Artist;
+import module2.homework.session6.artist.Musician;
+import module2.homework.session6.artist.Painter;
+import module2.homework.session6.artisticcomposition.ArtisticComposition;
+import module2.homework.session6.artisticcomposition.Painting;
+import module2.homework.session6.artisticcomposition.Song;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -16,12 +23,12 @@ public class MyApp {
 
         a1.setArtisticCompositions(new ArtisticComposition[]{b1, b2}); //
 
-        displayArtisticCompositionsFor(artists); // without a toString methods, something like module2.homework.session6.Song@1b6d3586, module2.homework.session6.Song@1b6d3586 will be printed for Bon Jovi
+        displayArtisticCompositionsFor(artists); // without a toString methods, something like module2.homework.session6.artisticcomposition.Song@1b6d3586, module2.homework.session6.artisticcomposition.Song@1b6d3586 will be printed for Bon Jovi
 
         // After adding the toString method (check the Song and ArtisticComposition classes, the output should look something like this:
         // [Song{duration=0} is a ArtisticCompostion{name='It's my life', yearOfRelease=1986}, Song{duration=0} is a ArtisticCompostion{name='Livin on a prayer', yearOfRelease=1986}]
 
-        /*Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.println("Let's create a paining for the Artist " + a2.getName());
         System.out.print("Insert the name of the painting: ");
         String name = input.nextLine();
@@ -40,26 +47,12 @@ public class MyApp {
 
         for(int i = 0; i < 10; i++) {
             System.out.println(a2.createNewArt());
-        }*/
-
-        Artist a3 = new Painter("Andreea Popescu", "Vaslui");
-        Artist a4 = new Painter("Zoe Popescu", "Vaslui");
-
-        Artist[] newArray = {a1, a4, a2, a3};
-        System.out.println(Arrays.toString(newArray));
-        Arrays.sort(newArray);
-        System.out.println(Arrays.toString(newArray));
-
-        ArtisticComposition b3 = new Song("All I want for Christmas is you", 1994);
-
-        ArtisticComposition[] artisticCompositions = {b1, b2, b3};
-        Arrays.sort(artisticCompositions);
-        System.out.println(Arrays.toString(artisticCompositions));
+        }
 
 
     }
 
-    public static void displayArtisticCompositionsFor(Artist[] artists) {
+    private static void displayArtisticCompositionsFor(Artist[] artists) {
         for(Artist a : artists) {
             System.out.println(Arrays.toString(a.getArtisticCompositions()));
         }

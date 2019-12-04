@@ -1,7 +1,8 @@
-package module2.homework.session6;
+package module2.homework.session6.artist;
+
+import module2.homework.session6.artisticcomposition.Song;
 
 import java.time.Year;
-import java.util.Arrays;
 
 public class Musician extends Artist {
     private String[] musicalInstruments;

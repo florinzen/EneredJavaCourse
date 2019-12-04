@@ -1,4 +1,6 @@
-package module2.homework.session6;
+package module2.homework.session6.artist;
+
+import module2.homework.session6.artisticcomposition.ArtisticComposition;
 
 public abstract class Artist implements Comparable<Artist> {
     private String name;

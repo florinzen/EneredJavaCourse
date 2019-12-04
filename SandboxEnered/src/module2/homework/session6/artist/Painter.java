@@ -1,7 +1,8 @@
-package module2.homework.session6;
+package module2.homework.session6.artist;
+
+import module2.homework.session6.artisticcomposition.Painting;
 
 import java.time.Year;
-import java.util.Random;
 
 public class Painter extends Artist {
 

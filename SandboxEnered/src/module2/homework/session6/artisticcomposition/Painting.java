@@ -1,4 +1,4 @@
-package module2.homework.session6;
+package module2.homework.session6.artisticcomposition;
 
 public class Painting extends ArtisticComposition {
     private double price;
