@@ -1,4 +1,4 @@
-package module2.homework.session6;
+package module2.homework.session6.inheritace;
 
 public abstract class ArtisticComposition implements Comparable<ArtisticComposition> {
     private String name;

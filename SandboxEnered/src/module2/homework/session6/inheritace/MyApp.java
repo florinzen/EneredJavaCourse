@@ -1,7 +1,6 @@
-package module2.homework.session6;
+package module2.homework.session6.inheritace;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class MyApp {
     public static void main(String[] args) {
@@ -16,7 +15,7 @@ public class MyApp {
 
         a1.setArtisticCompositions(new ArtisticComposition[]{b1, b2}); //
 
-        displayArtisticCompositionsFor(artists); // without a toString methods, something like module2.homework.session6.Song@1b6d3586, module2.homework.session6.Song@1b6d3586 will be printed for Bon Jovi
+        displayArtisticCompositionsFor(artists); // without a toString methods, something like module2.homework.session6.inheritace.Song@1b6d3586, module2.homework.session6.inheritace.Song@1b6d3586 will be printed for Bon Jovi
 
         // After adding the toString method (check the Song and ArtisticComposition classes, the output should look something like this:
         // [Song{duration=0} is a ArtisticCompostion{name='It's my life', yearOfRelease=1986}, Song{duration=0} is a ArtisticCompostion{name='Livin on a prayer', yearOfRelease=1986}]

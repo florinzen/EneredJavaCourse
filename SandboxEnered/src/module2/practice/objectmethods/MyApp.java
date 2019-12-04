@@ -2,7 +2,7 @@ package module2.practice.objectmethods;
 
 public class MyApp {
 
-    public static void main(String[] args) throws Throwable {
+    public static void main(String[] args) {
 
         for(int i = Integer.MIN_VALUE; i < Integer.MAX_VALUE; i++) {
             test();

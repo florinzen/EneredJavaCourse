@@ -8,6 +8,7 @@ public class ElectronicProduct extends Product {
     public ElectronicProduct(String name, double price,
                              boolean isItByBattery, int voltage) {
         super(name, price);
+        super.display();
         this.isItByBattery = isItByBattery;
         this.voltage = voltage;
     }
