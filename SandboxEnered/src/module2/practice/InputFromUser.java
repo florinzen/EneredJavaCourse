@@ -20,10 +20,10 @@ public class InputFromUser {
 
     public static void main(String[] args) {
         String toBeChecked = "AABBCC";
-        System.out.println("Numarul vocalelor din " + toBeChecked
+        /*System.out.println("Numarul vocalelor din " + toBeChecked
                 + " este: " + numberOfVowels(toBeChecked));
 
-
+*/
         //inputFromUser();
 
         storeArrayValuesFromUser();
@@ -47,7 +47,6 @@ public class InputFromUser {
 
     public static void storeArrayValuesFromUser() {
         Scanner scanner = new Scanner(System.in);
-        int[] array = new int[0];
         System.out.println("Let's create an array. Please fill in the array size");
         System.out.print("Array size: ");
         int arraySize = Integer.parseInt(scanner.nextLine());
@@ -61,7 +60,7 @@ public class InputFromUser {
         }
 
         System.out.println("Array size: " + arraySize);
-        array = new int[arraySize];
+        int[] array = new int[arraySize];
         for (int i = 0; i < arraySize; i++) {
             System.out.print("\nEnter the value for index " + i + " ");
             array[i] = Integer.parseInt(scanner.nextLine());

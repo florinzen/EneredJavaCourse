@@ -27,6 +27,5 @@ public class MyApp {
         for(Product product : products) {
             product.display();
         }
-
     }
 }

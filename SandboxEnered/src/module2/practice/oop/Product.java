@@ -29,4 +29,32 @@ public class Product {
     public void display() {
         System.out.println("Product details: " + name + ", " + price);
     }
+
+    @Override
+    public boolean equals(Object other) {
+        if (this == other) return true;
+        if (other == null || getClass() != other.getClass())
+            return false;
+        Product product = (Product) other;
+        return Double.compare(product.price, this.price) == 0 &&
+                this.name.equals(product.name);
+    }
+
+    @Override
+    public String toString() {
+        return "Product: name: " + this.name + ", price:" + this.price;
+    }
+
+    public static void main(String[] args) {
+        Product p1 = new Product("iPhone", 200);
+        Product p2 = new Product("iPhone", 200);
+
+        System.out.println(p1 == p2);
+        System.out.println("Cele 2 produse sunt egale: "
+                +p1.equals(p2));
+
+        System.out.println(p1);
+    }
+
+
 }

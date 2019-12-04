@@ -19,7 +19,7 @@ public class MyApp {
                 'r', 'S', 'F');
 
         // c1 has access only to Clothing methods
-        // t1 has access to Trousers and Clothing methods
+        // t1 has access to Trousers and Clothing, Returnable methods
         // r1 has access only to Returnable methods
 
         // However, if we only need the doReturn logic, we can simply use only Returnable references
@@ -39,11 +39,13 @@ public class MyApp {
 
        /* if(t1 instanceof Outdoors) {
             System.out.println("This is an outdoor item.");
-        }*/ // Compilation error, t1 cannot be casted to Outdoors - there is no relationship between Trousers and Outdoors
+        }*//* // Compilation error, t1 cannot be casted to Outdoors - there is no relationship between Trousers and Outdoors
 
         // By declaring a new reference and assigning the object
+        /*
         Returnable test = t1;
         System.out.println(test.doReturn());
+        */
     }
 
     public static void getDoReturn(Returnable[] returnables) {
