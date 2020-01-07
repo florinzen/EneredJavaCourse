@@ -1,4 +1,4 @@
-package module2.homework.session6.inheritace;
+package module2.homework.session6.artisticcomposition;
 
 public class Song extends ArtisticComposition {
 
@@ -10,6 +10,14 @@ public class Song extends ArtisticComposition {
 
     public Song(String name, int yearOfRelease, int duration) {
         this(name, yearOfRelease);
+        this.duration = duration;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
         this.duration = duration;
     }
 

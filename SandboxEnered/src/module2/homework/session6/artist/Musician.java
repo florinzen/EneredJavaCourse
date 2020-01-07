@@ -1,4 +1,6 @@
-package module2.homework.session6.inheritace;
+package module2.homework.session6.artist;
+
+import module2.homework.session6.artisticcomposition.Song;
 
 import java.time.Year;
 
