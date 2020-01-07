@@ -1,4 +1,4 @@
-package module2.practice;
+package module2.inclass.practice;
 
 import java.util.Arrays;
 import java.util.Scanner;

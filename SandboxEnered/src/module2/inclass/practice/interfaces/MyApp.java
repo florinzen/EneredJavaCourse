@@ -5,7 +5,6 @@ import module2.practice.interfaces.clothing.Shirt;
 import module2.practice.interfaces.clothing.Trousers;
 import module2.practice.interfaces.outdoors.Outdoors;
 import module2.practice.interfaces.outdoors.Stove;
-import module2.practice.interfaces.outdoors.StoveFuel;
 import module2.practice.interfaces.outdoors.Tent;
 
 public class MyApp {
