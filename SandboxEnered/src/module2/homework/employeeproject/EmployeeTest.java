@@ -1,8 +1,5 @@
 package module2.homework.employeeproject;
 
-import java.util.Set;
-import java.util.TreeSet;
-
 public class EmployeeTest {
 
     public static void main(String[] args) {
@@ -26,17 +23,6 @@ public class EmployeeTest {
         raiseCalculator.addEmployee(emp6);
 
         raiseCalculator.printRaises();
-
-        Set<String> names = new TreeSet<>();
-        names.add("Viorel");
-        names.add("Bianca");
-        names.add("Andreea");
-        names.add("Robert");
-        names.add("Denis");
-
-        for(String name : names) {
-            System.out.println(name);
-        }
 
     }
 }
