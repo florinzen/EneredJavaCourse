@@ -2,6 +2,8 @@ package module2.petproject;
 
 import module2.petproject.model.*;
 
+import java.util.Scanner;
+
 public class PetMain {
 
     public static void main(String[] args) {
@@ -43,6 +45,59 @@ public class PetMain {
         petShop.addPet(p4);
 
         petShop.displayPets();
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("What pet animal do you want? [cat/fish]");
+        Pet myPet = null;
+        String answer = sc.nextLine();
+        boolean isValid = false;
+        do {
+            if (answer.equals("cat")) {
+                myPet = new Cat();
+                isValid = true;
+            } else if (answer.equals("fish")) {
+                myPet = new Fish();
+                isValid = true;
+            } else {
+                System.out.println("You can only choose between cat/fish");
+                answer = sc.nextLine();
+            }
+        } while (!isValid);
+
+
+        System.out.println("How do you want to name your pet?");
+        System.out.print("Name: ");
+        String name = sc.nextLine();
+        myPet.setName(name);
+
+
+        System.out.println("Enter 1 if you want to play with your pet");
+        System.out.println("Enter 2 if you want to walk with your pet");
+        System.out.println("Enter 3 if you want to see the details of the pet");
+        System.out.println("Enter exit if you want to turn off the program");
+
+        isValid = false;
+        do {
+            String inputFromUser = sc.nextLine();
+            switch (inputFromUser) {
+                case "1":
+                    myPet.play();
+                    break;
+                case "2":
+                    ((Animal) myPet).walk();
+                    break;
+                case "3":
+                    System.out.println(myPet);
+                    break;
+                case "exit":
+                    isValid = true;
+                    break;
+                default:
+                    System.out.println("Invalid command");
+                    break;
+            }
+        }while(!isValid);
+
     }
 
     public static void playWithAnimal(Animal a) {
