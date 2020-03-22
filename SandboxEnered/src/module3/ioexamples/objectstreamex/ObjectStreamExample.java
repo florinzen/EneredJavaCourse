@@ -1,6 +1,7 @@
 package module3.ioexamples.objectstreamex;
 
 import java.io.*;
+import java.util.Optional;
 
 public class ObjectStreamExample {
     public static void main(String[] args) {
@@ -18,8 +19,14 @@ public class ObjectStreamExample {
 
         //testSerialization(c);
 
-        Classroom otherClassroom = testDeserialization();
-        System.out.println(otherClassroom);
+        Optional<Classroom> otherClassroom = testDeserialization();
+
+        if(otherClassroom.isPresent()) {
+            Classroom actualClassroom = otherClassroom.get();
+            System.out.println(actualClassroom);
+        } else {
+            System.out.println("Nothing to show");
+        }
 
     }
 
@@ -38,8 +45,8 @@ public class ObjectStreamExample {
         }
     }
 
-    // How could we improve this method?
-    private static Classroom testDeserialization() {
+    // How could we improve this method? Answer: Use Optional!!!
+    private static Optional<Classroom> testDeserialization() {
         // To restore an object the same principles apply, but backwards:
         // We chain the ObjectInputStream (Input this time!) to a FileInputStream instance
         // Why? Because we want to restore an object from a file. The file will be read as raw bytes by the readObject method
@@ -47,11 +54,11 @@ public class ObjectStreamExample {
         try (FileInputStream fis = new FileInputStream("test-serialization.obj");
              ObjectInputStream in = new ObjectInputStream(fis)) {
             Classroom deserializedClass = (Classroom) in.readObject();
-            return deserializedClass;
+            return Optional.of(deserializedClass);
         } catch (IOException | ClassNotFoundException e) {
             System.out.println("Exception occured while deserializing object. Exception: " + e);
         }
-        return null;
+        return Optional.empty();
     }
 
 }
