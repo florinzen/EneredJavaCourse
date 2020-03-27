@@ -11,21 +11,32 @@ public class HomeworkM3S7 {
         Scanner input = new Scanner(System.in);
         String name = input.nextLine();
 
-        printInitials(name);
+        printInitialsV1(name);
+        System.out.println();
+        printInitialsV2(name);
+        System.out.println();
 
         try {
-            printFileNamesHavingExtension("obj", "files");
+            printFileNamesHavingExtension("png", "/home/andreiherdes/andrei/Enered");
         } catch (IOException e) {
             System.out.println("Something went wrong!" + e.getMessage());
         }
     }
 
     // Exercise 1
-    public static void printInitials(String fullName) {
+    public static void printInitialsV1(String fullName) {
         for(int i = 0; i<fullName.length(); i++) {
             if(Character.isUpperCase(fullName.charAt(i))) {
                 System.out.print(fullName.charAt(i));
             }
+        }
+    }
+
+    // Exercise 1
+    public static void printInitialsV2(String fullName) {
+        String[] names = fullName.split(" ");
+        for(String n : names) {
+            System.out.print(n.charAt(0));
         }
     }
 
@@ -51,11 +62,8 @@ public class HomeworkM3S7 {
         for(File file : files) {
             Optional<String> fileExtension = getFileExtension(file.getName());
 
-            // How can I improve this piece of code?
-            if(fileExtension.isPresent()) {
-                if(fileExtension.get().equals(extensionFilter)) {
-                    System.out.println(file.getName());
-                }
+            if(fileExtension.isPresent() && fileExtension.get().equals(extensionFilter)) {
+                System.out.println(file.getName());
             }
         }
     }
