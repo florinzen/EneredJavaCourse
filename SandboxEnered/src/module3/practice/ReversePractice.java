@@ -12,9 +12,28 @@ public class ReversePractice {
     }
 
     public static String reverseV1(String input) {
+        // input = "This is a typical sentence."
+        // String[] words = {This, is, a, typical, sentence.}
         String[] words = input.split(" ");
         StringBuilder output = new StringBuilder();
 
+        // output = {}
+        // word = This
+        // output = "This "
+
+        // word = is
+        // output = "This is "
+
+        // word = a
+        // output = "This is a "
+
+        // word = typical
+        // reversedWord = typical -> lacipyt
+        // output = "This is a lacipyt "
+
+        // word = sentence.
+        // reversedWord = sentence. -> .ecnetnes
+        // output = "This is a lacipyt .ecnetnes "
         for(String word : words) {
             if(word.length() >= 5) {
                 StringBuilder reversedWord = new StringBuilder(word);
@@ -24,7 +43,9 @@ public class ReversePractice {
             }
             output.append(" ");
         }
-        return output.toString();
+
+        String trimmedOutput = output.toString().trim();
+        return trimmedOutput;
     }
 
     public static String reverseV2(String input) {
