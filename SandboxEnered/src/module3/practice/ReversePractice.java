@@ -44,8 +44,7 @@ public class ReversePractice {
             output.append(" ");
         }
 
-        String trimmedOutput = output.toString().trim();
-        return trimmedOutput;
+        return output.toString().trim();
     }
 
     public static String reverseV2(String input) {
